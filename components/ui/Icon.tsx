@@ -16,6 +16,7 @@ export type AvailableIcons =
   | "Elo"
   | "Facebook"
   | "FilterList"
+  | "Glasses"
   | "Heart"
   | "Instagram"
   | "Linkedin"
@@ -39,6 +40,7 @@ export type AvailableIcons =
   | "Twitter"
   | "User"
   | "Visa"
+  | "Warranty"
   | "WhatsApp"
   | "XMark"
   | "Zoom";

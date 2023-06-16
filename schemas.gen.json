@@ -7563,6 +7563,10 @@
                   },
                   {
                     "type": "string",
+                    "const": "Glasses"
+                  },
+                  {
+                    "type": "string",
                     "const": "Heart"
                   },
                   {
@@ -7652,6 +7656,10 @@
                   {
                     "type": "string",
                     "const": "Visa"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Warranty"
                   },
                   {
                     "type": "string",
@@ -9889,6 +9897,10 @@
             },
             {
               "type": "string",
+              "const": "Glasses"
+            },
+            {
+              "type": "string",
               "const": "Heart"
             },
             {
@@ -9978,6 +9990,10 @@
             {
               "type": "string",
               "const": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "Warranty"
             },
             {
               "type": "string",
