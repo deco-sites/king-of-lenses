@@ -1,6 +1,7 @@
 import Searchbar from "$store/islands/HeaderSearchbar.tsx";
 import Buttons from "$store/islands/HeaderButton.tsx";
 import Icon from "$store/components/ui/Icon.tsx";
+import { asset } from "$fresh/runtime.ts";
 import NavItem from "./NavItem.tsx";
 import { navbarHeight } from "./constants.ts";
 import type { INavItem } from "./NavItem.tsx";
@@ -15,7 +16,7 @@ function Navbar({ items, searchbar }: {
       {/* Mobile Version */}
       <div
         style={{ height: navbarHeight }}
-        class="md:hidden flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6 gap-2"
+        class="md:hidden bg-headers flex flex-row justify-between items-center border-b w-full pl-2 pr-6 gap-2"
       >
         <Buttons variant="menu" />
 
@@ -25,7 +26,11 @@ function Navbar({ items, searchbar }: {
           style={{ minHeight: navbarHeight }}
           aria-label="Store logo"
         >
-          <Icon id="Logo" width={126} height={16} />
+          <img
+            width={120}
+            height={46}
+            src={asset(`/king-of-lenses-logo.png`)}
+          />
         </a>
 
         <div class="flex gap-1">
@@ -35,14 +40,22 @@ function Navbar({ items, searchbar }: {
       </div>
 
       {/* Desktop Version */}
-      <div class="hidden md:flex flex-row justify-between items-center border-b border-base-200 w-full pl-2 pr-6">
+      <div class="hidden md:flex bg-headers flex-row justify-between items-center border-b w-full pl-2 pr-6">
         <div class="flex-none w-44">
           <a href="/" aria-label="Store logo" class="block px-4 py-3 w-[160px]">
-            <Icon id="Logo" width={126} height={16} />
+            <img
+              width={153}
+              height={58}
+              src={asset(`/king-of-lenses-logo.png`)}
+            />
           </a>
         </div>
         <div class="flex-auto flex justify-center">
-          {items.map((item) => <NavItem item={item} />)}
+          {items.map((item, index) => (
+            <NavItem
+              item={{ ...item, isLastItem: index === items.length - 1 }}
+            />
+          ))}
         </div>
         <div class="flex-none w-44 flex items-center justify-end gap-2">
           <Buttons variant="search" />
@@ -52,7 +65,13 @@ function Navbar({ items, searchbar }: {
             href="/login"
             aria-label="Log in"
           >
-            <Icon id="User" width={20} height={20} strokeWidth={0.4} />
+            <Icon
+              id="User"
+              class="text-headersIcons"
+              width={20}
+              height={20}
+              strokeWidth={0.4}
+            />
           </a>
           <a
             class="btn btn-circle btn-sm btn-ghost"
@@ -60,6 +79,7 @@ function Navbar({ items, searchbar }: {
             aria-label="Wishlist"
           >
             <Icon
+              class="text-headersIcons"
               id="Heart"
               size={20}
               strokeWidth={2}
