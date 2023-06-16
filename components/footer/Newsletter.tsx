@@ -42,7 +42,7 @@ function Newsletter(
 
   return (
     <div
-      class={`flex lg:max-w-[600px] ${
+      class={`flex ${
         tiled
           ? "flex-col gap-4 lg:flex-row lg:w-full lg:justify-between"
           : "flex-col gap-4"
