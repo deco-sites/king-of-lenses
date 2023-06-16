@@ -16,7 +16,7 @@ function SearchButton() {
         displaySearchbar.value = !displaySearchbar.peek();
       }}
     >
-      <Icon id="MagnifyingGlass" width={20} height={20} strokeWidth={0.1} />
+      <Icon id="MagnifyingGlass" class="text-headersIcons" width={20} height={20} strokeWidth={0.1} />
     </Button>
   );
 }
@@ -32,7 +32,7 @@ function MenuButton() {
         displayMenu.value = true;
       }}
     >
-      <Icon id="Bars3" width={20} height={20} strokeWidth={0.01} />
+      <Icon id="Bars3" class="text-headersIcons" width={20} height={20} strokeWidth={0.01} />
     </Button>
   );
 }
@@ -77,7 +77,7 @@ function CartButton() {
           </span>
         )}
         {!loading.value && (
-          <Icon id="ShoppingCart" width={20} height={20} strokeWidth={2} />
+          <Icon id="ShoppingCart" class="text-headersIcons" width={20} height={20} strokeWidth={2} />
         )}
       </div>
     </Button>

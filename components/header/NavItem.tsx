@@ -6,6 +6,7 @@ export interface INavItem {
   href: string;
   children?: INavItem[];
   image?: { src?: string; alt?: string };
+  isLastItem?: boolean;
 }
 
 function NavItem({ item }: { item: INavItem }) {
@@ -14,7 +15,11 @@ function NavItem({ item }: { item: INavItem }) {
   return (
     <li class="group flex items-center">
       <a href={href} class="px-4 py-3">
-        <span class="group-hover:underline">
+        <span
+          class={`${
+            item?.isLastItem ? "text-promotion" : "text-neutral-50"
+          } uppercase group-hover:underline`}
+        >
           {label}
         </span>
       </a>
@@ -22,7 +27,7 @@ function NavItem({ item }: { item: INavItem }) {
       {children && children.length > 0 &&
         (
           <div
-            class="fixed hidden hover:flex group-hover:flex bg-base-100 z-50 items-start justify-center gap-6 border-t border-b-2 border-base-200 w-screen"
+            class="bg-headers uppercase fixed hidden hover:flex group-hover:flex z-50 items-start justify-center gap-6 border-t border-b-2 w-screen"
             style={{ top: "0px", left: "0px", marginTop: headerHeight }}
           >
             {image?.src && (
@@ -38,7 +43,10 @@ function NavItem({ item }: { item: INavItem }) {
             <ul class="flex items-start justify-center gap-6">
               {children.map((node) => (
                 <li class="p-6">
-                  <a class="hover:underline" href={node.href}>
+                  <a
+                    class="text-neutral-50 uppercase hover:underline"
+                    href={node.href}
+                  >
                     <span>{node.label}</span>
                   </a>
 
@@ -46,7 +54,9 @@ function NavItem({ item }: { item: INavItem }) {
                     {node.children?.map((leaf) => (
                       <li>
                         <a class="hover:underline" href={leaf.href}>
-                          <span class="text-xs">{leaf.label}</span>
+                          <span class="text-xs text-neutral-50">
+                            {leaf.label}
+                          </span>
                         </a>
                       </li>
                     ))}
