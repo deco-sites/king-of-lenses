@@ -27,20 +27,21 @@ import * as $$$$$$$$6 from "./sections/DesignSystem/DesignSystem.tsx";
 import * as $$$$$$$$7 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$$$8 from "./sections/Header/Header.tsx";
 import * as $$$$$$$$9 from "./sections/Images/BannerGrid.tsx";
-import * as $$$$$$$$10 from "./sections/Images/Carousel.tsx";
-import * as $$$$$$$$11 from "./sections/Images/ImageGallery.tsx";
-import * as $$$$$$$$12 from "./sections/Images/ShoppableBanner.tsx";
-import * as $$$$$$$$13 from "./sections/Links/LinkTree.tsx";
-import * as $$$$$$$$14 from "./sections/Links/Shortcuts.tsx";
-import * as $$$$$$$$15 from "./sections/Miscellaneous/CampaignTimer.tsx";
-import * as $$$$$$$$16 from "./sections/Miscellaneous/CookieConsent.tsx";
-import * as $$$$$$$$17 from "./sections/Newsletter/Newsletter.tsx";
-import * as $$$$$$$$18 from "./sections/Product/ProductDetails.tsx";
-import * as $$$$$$$$19 from "./sections/Product/ProductShelf.tsx";
-import * as $$$$$$$$20 from "./sections/Product/SearchResult.tsx";
-import * as $$$$$$$$21 from "./sections/Product/Wishlist.tsx";
-import * as $$$$$$$$22 from "./sections/Social/InstagramPosts.tsx";
-import * as $$$$$$$$23 from "./sections/Social/WhatsApp.tsx";
+import * as $$$$$$$$10 from "./sections/Images/BannerTextButton.tsx";
+import * as $$$$$$$$11 from "./sections/Images/Carousel.tsx";
+import * as $$$$$$$$12 from "./sections/Images/ImageGallery.tsx";
+import * as $$$$$$$$13 from "./sections/Images/ShoppableBanner.tsx";
+import * as $$$$$$$$14 from "./sections/Links/LinkTree.tsx";
+import * as $$$$$$$$15 from "./sections/Links/Shortcuts.tsx";
+import * as $$$$$$$$16 from "./sections/Miscellaneous/CampaignTimer.tsx";
+import * as $$$$$$$$17 from "./sections/Miscellaneous/CookieConsent.tsx";
+import * as $$$$$$$$18 from "./sections/Newsletter/Newsletter.tsx";
+import * as $$$$$$$$19 from "./sections/Product/ProductDetails.tsx";
+import * as $$$$$$$$20 from "./sections/Product/ProductShelf.tsx";
+import * as $$$$$$$$21 from "./sections/Product/SearchResult.tsx";
+import * as $$$$$$$$22 from "./sections/Product/Wishlist.tsx";
+import * as $$$$$$$$23 from "./sections/Social/InstagramPosts.tsx";
+import * as $$$$$$$$24 from "./sections/Social/WhatsApp.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -199,22 +200,24 @@ const manifest = {
     "deco-sites/king-of-lenses/sections/Footer/Footer.tsx": $$$$$$$$7,
     "deco-sites/king-of-lenses/sections/Header/Header.tsx": $$$$$$$$8,
     "deco-sites/king-of-lenses/sections/Images/BannerGrid.tsx": $$$$$$$$9,
-    "deco-sites/king-of-lenses/sections/Images/Carousel.tsx": $$$$$$$$10,
-    "deco-sites/king-of-lenses/sections/Images/ImageGallery.tsx": $$$$$$$$11,
-    "deco-sites/king-of-lenses/sections/Images/ShoppableBanner.tsx": $$$$$$$$12,
-    "deco-sites/king-of-lenses/sections/Links/LinkTree.tsx": $$$$$$$$13,
-    "deco-sites/king-of-lenses/sections/Links/Shortcuts.tsx": $$$$$$$$14,
+    "deco-sites/king-of-lenses/sections/Images/BannerTextButton.tsx":
+      $$$$$$$$10,
+    "deco-sites/king-of-lenses/sections/Images/Carousel.tsx": $$$$$$$$11,
+    "deco-sites/king-of-lenses/sections/Images/ImageGallery.tsx": $$$$$$$$12,
+    "deco-sites/king-of-lenses/sections/Images/ShoppableBanner.tsx": $$$$$$$$13,
+    "deco-sites/king-of-lenses/sections/Links/LinkTree.tsx": $$$$$$$$14,
+    "deco-sites/king-of-lenses/sections/Links/Shortcuts.tsx": $$$$$$$$15,
     "deco-sites/king-of-lenses/sections/Miscellaneous/CampaignTimer.tsx":
-      $$$$$$$$15,
-    "deco-sites/king-of-lenses/sections/Miscellaneous/CookieConsent.tsx":
       $$$$$$$$16,
-    "deco-sites/king-of-lenses/sections/Newsletter/Newsletter.tsx": $$$$$$$$17,
-    "deco-sites/king-of-lenses/sections/Product/ProductDetails.tsx": $$$$$$$$18,
-    "deco-sites/king-of-lenses/sections/Product/ProductShelf.tsx": $$$$$$$$19,
-    "deco-sites/king-of-lenses/sections/Product/SearchResult.tsx": $$$$$$$$20,
-    "deco-sites/king-of-lenses/sections/Product/Wishlist.tsx": $$$$$$$$21,
-    "deco-sites/king-of-lenses/sections/Social/InstagramPosts.tsx": $$$$$$$$22,
-    "deco-sites/king-of-lenses/sections/Social/WhatsApp.tsx": $$$$$$$$23,
+    "deco-sites/king-of-lenses/sections/Miscellaneous/CookieConsent.tsx":
+      $$$$$$$$17,
+    "deco-sites/king-of-lenses/sections/Newsletter/Newsletter.tsx": $$$$$$$$18,
+    "deco-sites/king-of-lenses/sections/Product/ProductDetails.tsx": $$$$$$$$19,
+    "deco-sites/king-of-lenses/sections/Product/ProductShelf.tsx": $$$$$$$$20,
+    "deco-sites/king-of-lenses/sections/Product/SearchResult.tsx": $$$$$$$$21,
+    "deco-sites/king-of-lenses/sections/Product/Wishlist.tsx": $$$$$$$$22,
+    "deco-sites/king-of-lenses/sections/Social/InstagramPosts.tsx": $$$$$$$$23,
+    "deco-sites/king-of-lenses/sections/Social/WhatsApp.tsx": $$$$$$$$24,
     "deco-sites/std/sections/Analytics.tsx": i2$$$$3,
     "deco-sites/std/sections/configButterCMS.global.tsx": i2$$$$4,
     "deco-sites/std/sections/configOCC.global.tsx": i2$$$$5,

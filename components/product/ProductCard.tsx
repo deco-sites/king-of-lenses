@@ -258,7 +258,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
               >
                 {formatPrice(listPrice, offers!.priceCurrency!)}
               </div>
-              <div class="text-accent text-base lg:text-xl">
+              <div class="text-[18px] lg:text-xl font-bold text-neutral-900">
                 {formatPrice(price, offers!.priceCurrency!)}
               </div>
             </div>
