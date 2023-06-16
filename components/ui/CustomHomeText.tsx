@@ -3,8 +3,7 @@ function CustomHomeText() {
     <div class="flex flex-col gap-2 text-center tl items-center justify-start t-body c-on-base pl-[10px] pr-[10px] ">
       <div class="text-2xl leading-8 lg:leading-10 text-base-content lg:text-4xl flex lg:w-full">
         <h1 class="t-heading-1 border-r pl-3 pr-3 text-sm lg:text-xl flex flex-col lg:block lg:text-right lg:pr-[10px] font-semibold w-1/2">
-          <span>Lentes para</span>{' '}
-          <span>Óculos de Sol</span>
+          <span>Lentes para</span> <span>Óculos de Sol</span>
         </h1>
         <p class="lh-copy border-l pl-[15px] pr-[15px] text-sm lg:text-xl lg:text-left lg:pl-[10px] w-1/2">
           <a

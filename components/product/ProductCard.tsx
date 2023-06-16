@@ -98,7 +98,11 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
       id={id}
       class={`card card-compact group w-full ${
         align === "center" ? "text-center" : "text-start"
-      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:border-[#818281] border-[1px] border-transparent transition-colors" : ""}`}
+      } ${
+        l?.onMouseOver?.showCardShadow
+          ? "lg:hover:border-[#818281] border-[1px] border-transparent transition-colors"
+          : ""
+      }`}
       data-deco="view-product"
     >
       <SendEventOnClick
@@ -185,7 +189,6 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
             />
           )}
         </a>
-        
       </figure>
       {/* Prices & Name */}
       <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4">
