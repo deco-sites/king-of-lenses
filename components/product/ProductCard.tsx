@@ -87,7 +87,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
     <a
       href={url && relative(url)}
       aria-label="view product"
-      class="btn btn-block"
+      class="btn mx-auto btn-primary btn-sm px-6"
     >
       {l?.basics?.ctaText || "Ver produto"}
     </a>
@@ -98,7 +98,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
       id={id}
       class={`card card-compact group w-full ${
         align === "center" ? "text-center" : "text-start"
-      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:card-bordered" : ""}`}
+      } ${l?.onMouseOver?.showCardShadow ? "lg:hover:border-[#818281] border-[1px] border-transparent transition-colors" : ""}`}
       data-deco="view-product"
     >
       <SendEventOnClick
@@ -118,7 +118,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
         }}
       />
       <figure
-        class="relative "
+        class="relative overflow-hidden"
         style={{ aspectRatio: `${WIDTH} / ${HEIGHT}` }}
       >
         {/* Wishlist button */}
@@ -162,7 +162,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
             }
               ${
               l?.onMouseOver?.image == "Zoom image"
-                ? "duration-100 transition-scale scale-100 lg:group-hover:scale-125"
+                ? "duration-100 transition-scale scale-100 lg:group-hover:scale-110"
                 : ""
             }
             `}
@@ -185,24 +185,7 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
             />
           )}
         </a>
-        <figcaption
-          class={`
-          absolute bottom-1 left-0 w-full flex flex-col gap-3 p-2
-          ${
-            l?.onMouseOver?.showSkuSelector || l?.onMouseOver?.showCta
-              ? "transition-opacity opacity-0 lg:group-hover:opacity-100"
-              : "lg:hidden"
-          }
-        `}
-        >
-          {/* SKU Selector */}
-          {l?.onMouseOver?.showSkuSelector && (
-            <ul class="flex justify-center items-center gap-2 w-full">
-              {skuSelector}
-            </ul>
-          )}
-          {l?.onMouseOver?.showCta && cta}
-        </figcaption>
+        
       </figure>
       {/* Prices & Name */}
       <div class="flex-auto flex flex-col p-2 gap-3 lg:gap-4">
@@ -290,8 +273,8 @@ function ProductCard({ product, preload, itemListName, layout }: Props) {
         {!l?.hide.cta
           ? (
             <div
-              class={`flex-auto flex items-end ${
-                l?.onMouseOver?.showCta ? "lg:hidden" : ""
+              class={`flex-auto flex items-end transition-opacity opacity-0 lg:group-hover:opacity-100 ${
+                l?.onMouseOver?.showCta ? "hidden" : ""
               }`}
             >
               {cta}
