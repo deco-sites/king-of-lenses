@@ -20,10 +20,14 @@ export default function Social(
   return (
     <>
       {content && content.items && content.items.length > 0 && (
-        <div class="flex flex-col gap-4">
-          {content.title && <h3 class="text-lg">{content.title}</h3>}
+        <div class="flex flex-col gap-1">
+          {content.title && (
+            <h3 class="text-lg text-footerText text-center lg:text-start">
+              {content.title}
+            </h3>
+          )}
           <ul
-            class={`flex gap-4 ${
+            class={`flex gap-1 justify-center ${
               vertical ? "lg:flex-col lg:items-start" : "flex-wrap items-center"
             }`}
           >
@@ -35,9 +39,9 @@ export default function Social(
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${item.label} Logo`}
-                    class="flex gap-2 items-center"
+                    class="flex gap-2 items-center justify-center"
                   >
-                    <span class="block p-1 border rounded-full">
+                    <span class="block p-1 border rounded-full text-footerText">
                       <Icon
                         width={20}
                         height={20}

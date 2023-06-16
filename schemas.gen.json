@@ -92,6 +92,7 @@
               "deco-sites/king-of-lenses/sections/Footer/Footer.tsx",
               "deco-sites/king-of-lenses/sections/Header/Header.tsx",
               "deco-sites/king-of-lenses/sections/Images/BannerGrid.tsx",
+              "deco-sites/king-of-lenses/sections/Images/BannerTextButton.tsx",
               "deco-sites/king-of-lenses/sections/Images/Carousel.tsx",
               "deco-sites/king-of-lenses/sections/Images/ImageGallery.tsx",
               "deco-sites/king-of-lenses/sections/Images/ShoppableBanner.tsx",
@@ -7562,6 +7563,10 @@
                   },
                   {
                     "type": "string",
+                    "const": "Glasses"
+                  },
+                  {
+                    "type": "string",
                     "const": "Heart"
                   },
                   {
@@ -7651,6 +7656,10 @@
                   {
                     "type": "string",
                     "const": "Visa"
+                  },
+                  {
+                    "type": "string",
+                    "const": "Warranty"
                   },
                   {
                     "type": "string",
@@ -8627,6 +8636,10 @@
             {
               "type": "string",
               "const": "Base 100 inverted"
+            },
+            {
+              "type": "string",
+              "const": "King Color"
             }
           ],
           "type": "string",
@@ -8803,6 +8816,22 @@
             "items"
           ],
           "title": "Social"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "src": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Src"
+              }
+            },
+            "required": [
+              "src"
+            ]
+          },
+          "title": "Tags"
         },
         "payments": {
           "type": "object",
@@ -9207,6 +9236,106 @@
         "banners"
       ],
       "title": "deco-sites/king-of-lenses/components/ui/BannerGrid.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9jb21wb25lbnRzL3VpL0Jhbm5lclRleHRCdXR0b24udHN4@BannerTextButton": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on top of the text",
+          "title": "Title"
+        },
+        "text": {
+          "type": "string",
+          "description": "Text to be rendered after the title",
+          "title": "Text"
+        },
+        "textCTA": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "text to be rendered on CTA",
+          "title": "Text C T A"
+        },
+        "href": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "href where the button will send to",
+          "title": "Href"
+        },
+        "textAlign": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "right"
+            },
+            {
+              "type": "string",
+              "const": "left"
+            }
+          ],
+          "type": "string",
+          "description": "justify and align the text (MOBILE ONLY)",
+          "title": "Text Align"
+        },
+        "image": {
+          "type": "object",
+          "properties": {
+            "desktop": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Desktop"
+            },
+            "mobile": {
+              "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+              "title": "Mobile"
+            },
+            "alt": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "title": "Alt"
+            },
+            "imageAlign": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "const": "right"
+                },
+                {
+                  "type": "string",
+                  "const": "left"
+                }
+              ],
+              "type": "string",
+              "title": "Image Align"
+            },
+            "imageHeight": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "title": "Image Height"
+            }
+          },
+          "required": [
+            "desktop",
+            "mobile"
+          ],
+          "title": "Image"
+        }
+      },
+      "required": [
+        "text",
+        "image"
+      ],
+      "title": "deco-sites/king-of-lenses/components/ui/BannerTextButton.tsx@BannerTextButton"
     },
     "ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9jb21wb25lbnRzL3VpL0Jhbm5lckNhcm91c2VsLnRzeA==@Banner": {
       "type": "object",
@@ -9788,6 +9917,10 @@
             },
             {
               "type": "string",
+              "const": "Glasses"
+            },
+            {
+              "type": "string",
               "const": "Heart"
             },
             {
@@ -9877,6 +10010,10 @@
             {
               "type": "string",
               "const": "Visa"
+            },
+            {
+              "type": "string",
+              "const": "Warranty"
             },
             {
               "type": "string",
@@ -13360,6 +13497,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9zZWN0aW9ucy9JbWFnZXMvQmFubmVyVGV4dEJ1dHRvbi50c3g=": {
+      "title": "deco-sites/king-of-lenses/sections/Images/BannerTextButton.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9jb21wb25lbnRzL3VpL0Jhbm5lclRleHRCdXR0b24udHN4@BannerTextButton"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/king-of-lenses/sections/Images/BannerTextButton.tsx"
+          ],
+          "default": "deco-sites/king-of-lenses/sections/Images/BannerTextButton.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9zZWN0aW9ucy9JbWFnZXMvQ2Fyb3VzZWwudHN4": {
       "title": "deco-sites/king-of-lenses/sections/Images/Carousel.tsx",
       "type": "object",
@@ -14838,6 +14996,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9zZWN0aW9ucy9JbWFnZXMvQmFubmVyR3JpZC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9zZWN0aW9ucy9JbWFnZXMvQmFubmVyVGV4dEJ1dHRvbi50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9raW5nLW9mLWxlbnNlcy9zZWN0aW9ucy9JbWFnZXMvQ2Fyb3VzZWwudHN4"

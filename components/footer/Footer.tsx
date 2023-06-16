@@ -62,7 +62,8 @@ export interface Layout {
     | "Secondary"
     | "Accent"
     | "Base 100"
-    | "Base 100 inverted";
+    | "Base 100 inverted"
+    | "King Color";
   variation?:
     | "Variation 1"
     | "Variation 2"
@@ -98,6 +99,9 @@ export interface Props {
     title?: string;
     items: SocialItem[];
   };
+  tags?: {
+    src: LiveImage;
+  }[];
   payments?: {
     title?: string;
     items: PaymentItem[];
@@ -125,6 +129,7 @@ function Footer({
   regionOptions = { currency: [], language: [] },
   extraLinks = [],
   backToTheTop,
+  tags,
   layout = {
     backgroundColor: "Primary",
     variation: "Variation 1",
@@ -161,7 +166,7 @@ function Footer({
     : <Social content={social} vertical={layout?.variation == "Variation 3"} />;
   const _payments = layout?.hide?.paymentMethods
     ? <></>
-    : <PaymentMethods content={payments} />;
+    : <PaymentMethods tags={tags} content={payments} />;
   const _apps = layout?.hide?.mobileApps
     ? <></>
     : <MobileApps content={mobileApps} />;
@@ -182,18 +187,20 @@ function Footer({
         {(!layout?.variation || layout?.variation == "Variation 1") && (
           <div class="flex flex-col gap-10">
             <div class="flex flex-col lg:flex-row lg:justify-between gap-8 lg:gap-12">
-              {_logo}
-              {_sectionLinks}
               {_newsletter}
+              {_sectionLinks}
             </div>
             <Divider />
             <div class="flex flex-col md:flex-row gap-10 md:gap-14 md:items-end">
               {_payments}
-              {_social}
               {_apps}
               {_region}
             </div>
             <Divider />
+            <div class="flex flex-col md:flex-row lg:justify-center lg:gap-8 gap-1 md:gap-1 md:items-end">
+              {_logo}
+              {_social}
+            </div>
             <div class="flex flex-col-reverse md:flex-row md:justify-between gap-10">
               <PoweredBy />
               {_links}

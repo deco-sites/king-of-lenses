@@ -5,10 +5,13 @@ export interface PaymentItem {
 }
 
 export default function PaymentMethods(
-  { content }: { content?: { title?: string; items?: PaymentItem[] } },
+  { content, tags }: {
+    content?: { title?: string; items?: PaymentItem[] };
+    tags?: { src?: string }[];
+  },
 ) {
   return (
-    <>
+    <div class="flex flex-col gap-[40px]">
       {content && content.items && content.items.length > 0 && (
         <div class="flex flex-col gap-4">
           {content.title && <h3 class="text-lg">{content.title}</h3>}
@@ -31,6 +34,20 @@ export default function PaymentMethods(
           </ul>
         </div>
       )}
-    </>
+      <div class="flex flex-col gap-4">
+        <ul class="flex items-center gap-4 flex-wrap">
+          {tags?.map((item, index) => {
+            return (
+              <li>
+                <img
+                  src={item?.src}
+                  alt={`tag-${index}`}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </div>
   );
 }

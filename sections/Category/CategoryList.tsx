@@ -5,6 +5,7 @@ import Icon from "$store/components/ui/Icon.tsx";
 import { useId } from "preact/hooks";
 import SliderJS from "$store/islands/SliderJS.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
+import CustomHomeText from "$store/components/ui/CustomHomeText.tsx";
 
 export interface Category {
   tag?: string;
@@ -81,45 +82,32 @@ function CategoryList(props: Props) {
   return (
     <div
       id={id}
-      class="container py-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
+      class="container pt-8 flex flex-col gap-8 lg:gap-10 text-base-content  lg:py-10"
     >
-      <Header
-        title={header.title}
-        description={header.description || ""}
-        alignment={layout.headerAlignment || "center"}
-      />
+      <CustomHomeText />
 
-      <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 row-end-5">
+      <Slider class="carousel carousel-start gap-4 lg:gap-8 row-start-2 justify-between row-end-5">
         {list.map((
           { tag, label, description, href, image, buttonText },
           index,
         ) => (
           <Slider.Item
             index={index}
-            class="flex flex-col gap-4 carousel-item first:pl-6 sm:first:pl-0 last:pr-6 sm:last:pr-0"
+            class="flex flex-col gap-3 carousel-item first:pl-[12px] sm:first:pl-0 last:pr-6 sm:last:pr-0"
           >
             <a
               href={href}
-              class="flex flex-col gap-4 lg:w-[280px] w-40 lg:h-auto"
+              class="flex-col flex gap-4 h-[120px] lg:w-[160px]"
             >
-              {layout.categoryCard?.textPosition === "top" &&
-                (
-                  <CardText
-                    tag={tag}
-                    label={label}
-                    description={description}
-                    alignment={layout?.categoryCard?.textAlignment}
-                  />
-                )}
               {image &&
                 (
                   <figure>
                     <Image
-                      class="card w-full"
+                      class="card m-auto"
                       src={image}
                       alt={description || label || tag}
-                      width={160}
-                      height={195}
+                      width={120}
+                      height={120}
                       loading="lazy"
                     />
                   </figure>
