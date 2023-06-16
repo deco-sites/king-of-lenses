@@ -8636,6 +8636,10 @@
             {
               "type": "string",
               "const": "Base 100 inverted"
+            },
+            {
+              "type": "string",
+              "const": "King Color"
             }
           ],
           "type": "string",
@@ -8812,6 +8816,22 @@
             "items"
           ],
           "title": "Social"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "src": {
+                "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+                "title": "Src"
+              }
+            },
+            "required": [
+              "src"
+            ]
+          },
+          "title": "Tags"
         },
         "payments": {
           "type": "object",

@@ -30,7 +30,7 @@ function BannerTextButton(
   { text, href, textAlign, title, textCTA, image }: BannerTextButton,
 ) {
   return (
-    <div class="lg:flex lg:max-w-[1470px] lg:m-auto">
+    <div class="lg:flex my-5 lg:max-w-[1470px] lg:m-auto">
       <div
         class={`flex flex-col ${
           textAlign === "left"

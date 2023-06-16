@@ -42,7 +42,7 @@ function Newsletter(
 
   return (
     <div
-      class={`flex ${
+      class={`flex lg:max-w-[600px] ${
         tiled
           ? "flex-col gap-4 lg:flex-row lg:w-full lg:justify-between"
           : "flex-col gap-4"
@@ -50,7 +50,7 @@ function Newsletter(
     >
       <div class="flex flex-col gap-4">
         {content?.title && (
-          <h3 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
+          <h3 class={`${tiled ? "text-2xl lg:text-3xl" : "text-lg"} text-center lg:text-2xl`}>
             {content?.title}
           </h3>
         )}
@@ -61,7 +61,7 @@ function Newsletter(
           class="form-control"
           onSubmit={handleSubmit}
         >
-          <div class="flex gap-3">
+          <div class="flex gap-3 lg:justify-center">
             <input
               name="email"
               class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
