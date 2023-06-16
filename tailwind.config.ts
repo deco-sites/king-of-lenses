@@ -14,7 +14,7 @@ export default {
       titleText: "#3f3f40",
     },
     minWidth: {
-      '1/2': '50%',
-    }
+      "1/2": "50%",
+    },
   },
 };
